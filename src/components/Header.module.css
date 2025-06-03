@@ -1,0 +1,124 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 6%;
+  color: var(--secondary-text-color);
+  background-color: rgba(18, 18, 18, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.scrolled {
+  background-color: rgba(18, 18, 18, 1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, #fa6e00 0%, #e60026 100%);
+  background-clip: text;
+  color: transparent;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.nav {
+  flex: 1;
+  text-align: center;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 3.3rem;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--quaternary-text-color);
+}
+
+.hireMe {
+  background: var(--primary-button-bg);
+  color: var(--text-button-color);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.7rem;
+  padding: 0;
+  margin: 0;
+  color: var(--primary-text-color);
+}
+
+.nav a.active {
+  color: var(--primary-text-color);
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .menu {
+    display: block;
+  }
+
+  .header {
+    padding: 1rem 2rem;
+    position: relative;
+  }
+
+  .nav {
+    position: absolute;
+    top: 67px;
+    left: 0;
+    width: 100%;
+    background: rgba(18, 18, 18, 0.1);
+    backdrop-filter: blur(20px);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+    z-index: 20;
+    height: 100vh;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .nav.navActive {
+    max-height: 100vh;
+    opacity: 1;
+    overflow: hidden;
+    transform: translateY(0);
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+    height: 90vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav ul li{
+    padding: 1rem 0;
+  }
+
+  .hireMe {
+    display: none;
+  }
+}
+
