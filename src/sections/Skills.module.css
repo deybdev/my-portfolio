@@ -1,18 +1,19 @@
 .skillSection {
   padding: 4rem 6%;
   text-align: center;
-  height: 100vh;
 }
 
 .skillContainer {
   margin-top: 2rem;
+  min-height: 80vh;
+  overflow: hidden;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  flex-wrap: nowrap;
+  gap: 0.3rem;
   margin: 3rem 0 3rem 0;
 }
 
@@ -32,15 +33,14 @@
 
 .skillList {
   display: flex;
-  gap: 2rem;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .skillItem {
-  display: inline;
   text-align: center;
-  margin-left: 50px;
   width: 120px;
 }
 
@@ -82,12 +82,12 @@
 
 @media (max-width: 768px) {
   .skillList {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    justify-content: center;
+    gap: 3rem;
   }
 
   .skillItem {
-    width: 100px; /* slightly smaller to fit better */
+    width: 100px;
   }
 
   .circle {
@@ -112,5 +112,3 @@
     font-size: 13px;
   }
 }
-
-

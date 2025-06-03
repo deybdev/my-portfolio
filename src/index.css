@@ -21,13 +21,16 @@
 }
 
 body.nav-open {
-  overflow: hidden;
+  overflow-y: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 30px;
-  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -75,4 +78,19 @@ button:hover {
   background: var(--logo-gradient);
   background-clip: text;
   color: transparent;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+  }
+
+  button:hover {
+    transform: scale(1);
+  }
 }

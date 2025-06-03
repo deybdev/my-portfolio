@@ -101,7 +101,7 @@
 }
 
 .typing::after {
-  content: '|';
+  content: "|";
   animation: blink 1s infinite;
   color: #fa6e00;
 }
@@ -129,12 +129,17 @@
   }
 
   .left h2 {
-    font-size: 3rem;
+    font-size: 1.5rem;
   }
 
   .icons {
     justify-content: center;
     margin-top: 0.75rem;
+  }
+
+  .icon {
+    font-size: 1.1rem;
+    padding: 0.3rem 0.4rem;
   }
 
   .buttons {
@@ -179,6 +184,11 @@
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
