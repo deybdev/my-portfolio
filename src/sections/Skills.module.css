@@ -6,12 +6,11 @@
 .skillContainer {
   margin-top: 2rem;
   min-height: 80vh;
-  overflow: hidden;
 }
 
 .buttons {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: nowrap;
   gap: 0.3rem;
   margin: 3rem 0 3rem 0;

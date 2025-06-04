@@ -1,0 +1,119 @@
+.projectSection {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projectContainer {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.projectCard {
+  width: 350px;
+  border-radius: 10px;
+  border: 3px solid var(--primary-text-color);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  display: block;
+  border-bottom: 3px solid var(--primary-text-color);
+}
+
+.blurOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid var(--primary-text-color);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.imageWrapper:hover .blurOverlay {
+  opacity: 1;
+}
+
+.imageWrapper:hover .projectImage {
+  transform: scale(1.05);
+}
+
+.githubOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.imageWrapper:hover .githubOverlay {
+  opacity: 1;
+}
+
+.githubIcon {
+  color: #fff;
+  font-size: 24px;
+}
+
+.projectContent {
+  padding: 10px ;
+}
+
+.projectName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--quaternary-text-color);
+}
+
+.projectDescription {
+  font-size: 0.95rem;
+  color: #707070;
+  margin: .5rem 0 .7rem;
+  flex-grow: 1;
+}
+
+.languages {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.languages i {
+    border: 2px solid;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: .7rem;
+}
