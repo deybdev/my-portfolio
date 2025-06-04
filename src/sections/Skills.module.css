@@ -54,6 +54,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 0.5rem;
+  transition: background 1s ease-in-out;
 }
 
 .innerCircle i {
@@ -63,7 +64,7 @@
 .innerCircle {
   width: 95px;
   height: 95px;
-  background-color: #121212;
+  background-color: var(--dark-bg-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -82,8 +83,7 @@
 }
 
 @media (max-width: 768px) {
-
-  .buttons{
+  .buttons {
     justify-content: space-evenly;
   }
 
