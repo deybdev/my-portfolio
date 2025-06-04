@@ -14,7 +14,9 @@ const AboutSection = () => {
 
   return (
     <section className={styles.aboutSection} id="about">
-      <h3 className="section-title">About Me</h3>
+      <h3 className="section-title" data-aos="fade-down" data-aos-delay={100}>
+        About Me
+      </h3>
       <div className={styles.container}>
         <div
           className={styles.imgContainer}

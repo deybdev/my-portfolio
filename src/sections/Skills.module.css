@@ -1,18 +1,20 @@
 .skillSection {
-  padding: 4rem 6%;
+  padding: 4rem 3% 0;
   text-align: center;
 }
 
 .skillContainer {
-  margin-top: 2rem;
-  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: nowrap;
-  gap: 0.3rem;
+  gap: 0.9rem;
   margin: 3rem 0 3rem 0;
 }
 
@@ -80,6 +82,11 @@
 }
 
 @media (max-width: 768px) {
+
+  .buttons{
+    justify-content: space-evenly;
+  }
+
   .skillList {
     justify-content: center;
     gap: 3rem;

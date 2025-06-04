@@ -5,6 +5,19 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const [scrolled, setScrolled] = useState(false);
+  const [lightMode, setLightMode] = useState(() => {
+    return localStorage.getItem("lightMode") === "true";
+  });
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (lightMode) {
+      root.classList.add("light-mode");
+    } else {
+      root.classList.remove("light-mode");
+    }
+    localStorage.setItem("lightMode", lightMode);
+  }, [lightMode]);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -35,6 +48,10 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleLightMode = () => {
+    setLightMode((prev) => !prev);
+  };
 
   const links = [
     { href: "#home", label: "Home" },
@@ -85,7 +102,11 @@ const Header = () => {
           ))}
         </ul>
       </nav>
-      <button className={styles.menu} onClick={toggleMenu}>
+      <button className={styles.toggleMode} title={!lightMode ? "Toggle Light Mode" : "Toggle Dark Mode"} onClick={toggleLightMode}>
+        <i className={!lightMode ? "ri-sun-fill" : "ri-moon-fill"}></i>
+      </button>
+
+      <button className={styles.menu}  onClick={toggleMenu}>
         <i className={menuOpen ? "ri-close-line" : "ri-menu-line"}></i>
       </button>
     </header>

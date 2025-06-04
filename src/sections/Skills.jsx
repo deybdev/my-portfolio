@@ -71,7 +71,9 @@ const Skills = () => {
 
   return (
     <section className={styles.skillSection} id="skills">
-      <h3 className="section-title">My Skills</h3>
+      <h3 className="section-title" data-aos="fade-down" data-aos-delay={100}>
+        My Skills
+      </h3>
 
       <div className={styles.skillContainer}>
         <div className={styles.buttons}>
@@ -82,6 +84,8 @@ const Skills = () => {
               className={
                 selectedCategory === category ? styles.activeButton : ""
               }
+              data-aos="fade-down"
+              data-aos-delay={100}
             >
               {category}
             </button>

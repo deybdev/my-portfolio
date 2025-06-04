@@ -1,7 +1,7 @@
 .projectSection {
-  padding: 2rem;
-  max-width: 1200px;
+  padding: 4rem 3% 0;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .projectContainer {
@@ -90,7 +90,7 @@
 }
 
 .projectContent {
-  padding: 10px ;
+  padding: 10px;
 }
 
 .projectName {
@@ -102,7 +102,7 @@
 .projectDescription {
   font-size: 0.95rem;
   color: #707070;
-  margin: .5rem 0 .7rem;
+  margin: 0.5rem 0 0.7rem;
   flex-grow: 1;
 }
 
@@ -112,8 +112,38 @@
 }
 
 .languages i {
-    border: 2px solid;
-    border-radius: 50%;
-    padding: 5px;
-    font-size: .7rem;
+  border: 2px solid;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 0.7rem;
+}
+
+@media (max-width: 768px) {
+  .projectCard {
+    width: 300px;
+  }
+
+  .projectName {
+    font-size: 1rem;
+  }
+
+  .projectDescription {
+    font-size: 0.7rem;
+  }
+
+  .languages i {
+    font-size: 0.5rem;
+  }
+
+  .imageWrapper:hover .githubOverlay {
+    opacity: 0;
+  }
+
+  .imageWrapper:hover .projectImage {
+    transform: scale(1);
+  }
+
+  .blurOverlay {
+    backdrop-filter: blur(0);
+  }
 }
