@@ -1,6 +1,7 @@
 .contactSection {
   padding: 4rem 3% 4rem;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .contactContainer {
